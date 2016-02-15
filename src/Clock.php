@@ -8,5 +8,9 @@
             }
             return ($hour/12)*360;
         }
+        function minuteHandAngle($minutes)
+        {
+            return ($minutes/60)*360;
+        }
     }
 ?>
