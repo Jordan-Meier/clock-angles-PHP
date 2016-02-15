@@ -39,5 +39,23 @@
             $this->assertEquals(180, $result2);
             $this->assertEquals(0, $result3);
         }
+        function test_angleBetweenHands_all()
+        {
+            // arrange
+            $test_Clock = new Clock;
+            $input_time = '10:30';
+            $input_time2 = '12:30';
+            $input_time3 = '1:07';
+
+            // act
+            $result = $test_Clock->angleBetweenHands($input_time);
+            $result2 = $test_Clock->angleBetweenHands($input_time2);
+            $result3 = $test_Clock->angleBetweenHands($input_time3);
+
+            // assert
+            $this->assertEquals(135, $result);
+            $this->assertEquals(165, $result2);
+            $this->assertEquals(8.5, $result3);
+        }
     }
 ?>
